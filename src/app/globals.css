@@ -1,26 +1,145 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ------------------------------------------------------------------
+   Siddhya Technology design tokens
+   Ported from the Google Stitch Tailwind v3 config (HTML <head>) into
+   Tailwind v4's CSS-first @theme. Keep names identical to the export so
+   the ported markup ("same to same") keeps working unchanged.
+-------------------------------------------------------------------*/
+@theme {
+  /* Fonts — dual strategy: Inter everywhere (Stitch maps every family to Inter) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-body-md: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-body-lg: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-label-sm: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-h1: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-h1-mobile: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-h2: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-h2-mobile: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-h3: var(--font-inter), ui-sans-serif, sans-serif;
+  --font-h4: var(--font-inter), ui-sans-serif, sans-serif;
+
+  /* Type scale (size / line-height / weight) */
+  --text-h1: 56px;
+  --text-h1--line-height: 1.2;
+  --text-h1--font-weight: 700;
+  --text-h1-mobile: 36px;
+  --text-h1-mobile--line-height: 1.2;
+  --text-h1-mobile--font-weight: 700;
+  --text-h2: 40px;
+  --text-h2--line-height: 1.2;
+  --text-h2--font-weight: 700;
+  --text-h2-mobile: 28px;
+  --text-h2-mobile--line-height: 1.2;
+  --text-h2-mobile--font-weight: 700;
+  --text-h3: 24px;
+  --text-h3--line-height: 1.3;
+  --text-h3--font-weight: 600;
+  --text-h4: 18px;
+  --text-h4--line-height: 1.4;
+  --text-h4--font-weight: 600;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.5;
+  --text-body-md--font-weight: 400;
+  --text-label-sm: 14px;
+  --text-label-sm--line-height: 1;
+  --text-label-sm--font-weight: 500;
+
+  /* Brand + Material 3 tonal palette */
+  --color-primary: #1a2b5f; /* Deep Navy */
+  --color-primary-container: #1a2b5f;
+  --color-electric-blue: #2563eb;
+  --color-success-green: #16a34a;
+  --color-secondary: #585d75;
+  --color-secondary-container: #dce1fd;
+  --color-secondary-fixed: #dce1fd;
+  --color-secondary-fixed-dim: #c0c5e0;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #151b2f;
+  --color-on-secondary-fixed-variant: #40465c;
+  --color-on-secondary-container: #5e637b;
+  --color-background: #fbf8fe;
+  --color-on-background: #1b1b1f;
+  --color-surface: #fbf8fe;
+  --color-surface-bright: #fbf8fe;
+  --color-surface-dim: #dbd9de;
+  --color-surface-variant: #e4e1e7;
+  --color-surface-tint: #4c5c92;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f3f8;
+  --color-surface-container: #efedf2;
+  --color-surface-container-high: #e9e7ec;
+  --color-surface-container-highest: #e4e1e7;
+  --color-on-surface: #1b1b1f;
+  --color-on-surface-variant: #45464f;
+  --color-inverse-surface: #303034;
+  --color-inverse-on-surface: #f2f0f5;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #02174b;
+  --color-on-primary-fixed-variant: #344479;
+  --color-on-primary-container: #8494ce;
+  --color-primary-fixed: #dce1ff;
+  --color-primary-fixed-dim: #b5c4ff;
+  --color-inverse-primary: #b5c4ff;
+  --color-tertiary: #2e1200;
+  --color-tertiary-container: #4d2300;
+  --color-tertiary-fixed: #ffdcc6;
+  --color-tertiary-fixed-dim: #feb786;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #301400;
+  --color-on-tertiary-fixed-variant: #6b3a14;
+  --color-on-tertiary-container: #c8885b;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-outline: #757680;
+  --color-outline-variant: #c5c6d1;
+
+  /* Named spacing tokens */
+  --spacing-margin-desktop: 40px;
+  --spacing-margin-mobile: 16px;
+  --spacing-gutter: 24px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 32px;
+  --spacing-navbar-height: 68px;
+
+  /* max-w-max-width → 1280px container */
+  --container-max-width: 1280px;
+
+  /* Marquee animation for the tech-stack strip */
+  --animate-marquee: marquee 30s linear infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+}
+
+/* Frosted floating card on the hero illustration */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Material Symbols icon font defaults + filled variant */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.material-symbols-outlined.fill-1 {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
 }
