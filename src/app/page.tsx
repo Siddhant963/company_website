@@ -1,3 +1,26 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Siddhya Technology | #1 IT Company in Jabalpur, Madhya Pradesh",
+  description:
+    "Siddhya Technology is Jabalpur's #1 IT company. We deliver Custom Software Development, Mobile Apps, ERPNext ERP, Digital Marketing, Cloud Solutions & AI/ML services across Madhya Pradesh and India.",
+  keywords: [
+    "IT company Jabalpur",
+    "tech company Jabalpur",
+    "best IT company Jabalpur",
+    "software development Jabalpur",
+    "ERP company Jabalpur",
+    "digital marketing Jabalpur",
+    "web development Jabalpur",
+    "mobile app development Jabalpur",
+    "cloud services Jabalpur",
+    "IT company Madhya Pradesh",
+    "software company MP",
+    "Siddhya Technology Jabalpur",
+  ],
+  alternates: { canonical: "https://siddhyatechnology.in" },
+};
+
 const HERO_STATS = [
   { value: "50+", label: "Projects Delivered" },
   { value: "20+", label: "Expert Developers" },
@@ -158,7 +181,7 @@ export default function Home() {
           {/* Left Content */}
           <div className="w-full md:w-[55%] space-y-6 md:space-y-8">
             <h1 className="font-h1 text-h1-mobile lg:text-h1 text-surface-container-lowest leading-tight">
-              Complete IT Solutions — From Idea to Launch
+              Complete IT Solutions "” From Idea to Launch
             </h1>
             <p className="text-surface-container-lowest/80 text-body-md md:text-body-lg font-body-md max-w-xl">
               Empowering businesses with enterprise-grade Software Development,
@@ -173,7 +196,7 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Stats Row — 2-col on mobile, 4-col on lg */}
+            {/* Stats Row "” 2-col on mobile, 4-col on lg */}
             <div className="pt-6 md:pt-8 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 border-t border-surface-container-lowest/20">
               {HERO_STATS.map((stat) => (
                 <div key={stat.label}>
@@ -188,7 +211,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Illustration — hidden on mobile, visible md+ */}
+          {/* Right Illustration "” hidden on mobile, visible md+ */}
           <div className="hidden md:block md:w-[45%] relative">
             <div className="relative w-full aspect-square rounded-2xl overflow-hidden border border-surface-container-lowest/10 shadow-2xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -198,7 +221,7 @@ export default function Home() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_58X3j19K6QbcJoC7tJoEzH3qShuYgfMambnuqnVFIENuWMqhpwBu3bd-vfiMvvu4l0kHXdmq9baFx2Mz58FQeCbKbspCma996ZSvSSUe99IyyCPRMxEGge9BW5NUC5ty_clynx6N5dTGLM5rY8A3uLdFmJcDdKeMQswgEDLKrXaTDES5jwpYYRf84oBAojz54SI54o_T8ohnQvCRuJI_fYy-BPSifGeug9itwV629hDXfZibh2dMVr7OwMpuR2H03YrcML1753Km"
               />
             </div>
-            {/* Floating badge — only visible on large screens where there is room */}
+            {/* Floating badge "” only visible on large screens where there is room */}
             <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-xl shadow-xl hidden lg:block">
               <div className="flex items-center gap-4">
                 <span className="material-symbols-outlined text-electric-blue text-4xl">
@@ -220,7 +243,7 @@ export default function Home() {
       </section>
 
       {/* ------------------------------------------------------------------ */}
-      {/* Services Overview — 9-card grid                                     */}
+      {/* Services Overview "” 9-card grid                                     */}
       {/* ------------------------------------------------------------------ */}
       <section className="py-16 md:py-24 max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="text-center mb-10 md:mb-16 space-y-4">
@@ -232,7 +255,7 @@ export default function Home() {
             challenges through specialized services.
           </p>
         </div>
-        {/* 1-col → 2-col md → 3-col lg */}
+        {/* 1-col â†’ 2-col md â†’ 3-col lg */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
           {SERVICES.map((service) => (
             <div
@@ -261,7 +284,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-surface-container-low">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
 
-          {/* Left — copy block */}
+          {/* Left "” copy block */}
           <div className="space-y-6">
             <h2 className="font-h2 text-h2-mobile lg:text-h2 text-primary">
               Why Industry Leaders Choose Siddhya
@@ -301,7 +324,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right — 2×2 stat cards (always 2-col, inner padding shrinks on mobile) */}
+          {/* Right "” 2Ã—2 stat cards (always 2-col, inner padding shrinks on mobile) */}
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {WHY_STATS.map((stat) =>
               stat.dark ? (
@@ -347,7 +370,7 @@ export default function Home() {
             {/* Earthy background glow */}
             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_50%,#c8885b22,transparent_50%)]" />
 
-            {/* Left — copy */}
+            {/* Left "” copy */}
             <div className="w-full lg:w-1/2 space-y-6 relative z-10">
               <span className="inline-block px-4 py-1.5 bg-[#c8885b]/20 text-[#feb786] rounded-full text-label-sm font-label-sm uppercase tracking-widest">
                 Product Spotlight
@@ -384,7 +407,7 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Right — screenshot */}
+            {/* Right "” screenshot */}
             <div className="w-full lg:w-1/2 relative">
               <div className="relative z-10 lg:translate-x-12">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -444,7 +467,7 @@ export default function Home() {
             What our clients have to say about working with us.
           </p>
         </div>
-        {/* 1-col mobile → 3-col md+ */}
+        {/* 1-col mobile â†’ 3-col md+ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {TESTIMONIALS.map((t) => (
             <div
@@ -534,3 +557,4 @@ export default function Home() {
     </>
   );
 }
+

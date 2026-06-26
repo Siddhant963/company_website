@@ -2,15 +2,24 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact Us – Siddhya Technology',
+  title: "Contact Us  -  IT Company in Jabalpur | +91 6265004675",
   description:
-    'Partner with a team of experts dedicated to your digital transformation. Reach out for software development, cloud consulting, AI, and managed IT services.',
+    "Contact Siddhya Technology  -  Jabalpur's leading IT company. Call +91 6265004675 or email siddhyatechnology@gmail.com for software development, ERPNext, digital marketing & cloud consultations.",
+  keywords: [
+    "contact IT company Jabalpur",
+    "software company contact Jabalpur",
+    "Siddhya Technology phone number",
+    "IT consultation Jabalpur",
+    "hire IT company Jabalpur",
+    "ERP consultation MP",
+  ],
+  alternates: { canonical: "https://siddhyatechnology.in/contact" },
 };
 
 export default function ContactPage() {
   return (
     <div className="pb-stack-lg min-h-screen bg-surface">
-      {/* ── Page Header ── */}
+      {/* '' Page Header '' */}
       <header className="pt-10 pb-stack-lg max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center md:text-left">
         <h1 className="font-h1 text-h1-mobile md:text-h1 text-primary mb-4 leading-tight">
           Connect with Excellence
@@ -22,11 +31,11 @@ export default function ContactPage() {
         </p>
       </header>
 
-      {/* ── Main Two-Column Grid ── */}
+      {/* '' Main Two-Column Grid '' */}
       <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
 
-          {/* ════ LEFT: Inquiry Form (7 / 12 cols) ════ */}
+          {/* â•â•â•â• LEFT: Inquiry Form (7 / 12 cols) â•â•â•â• */}
           <div className="md:col-span-7 bg-surface-container-lowest rounded-xl p-6 md:p-8 shadow-sm border border-outline-variant/30">
             <div className="mb-8">
               <h2 className="font-h2 text-h2-mobile md:text-h2 text-primary mb-2">
@@ -39,7 +48,7 @@ export default function ContactPage() {
             <ContactForm />
           </div>
 
-          {/* ════ RIGHT: Contact Info + Testimonial (5 / 12 cols) ════ */}
+          {/* â•â•â•â• RIGHT: Contact Info + Testimonial (5 / 12 cols) â•â•â•â• */}
           <div className="md:col-span-5 space-y-gutter">
 
             {/* Contact Details Card */}
@@ -50,7 +59,7 @@ export default function ContactPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXz8vbQMUfBJfKik8uLgnJzUq3zPeVq-GRiUci4plyRsOeVquQ_eYf4uFwjjCpY576PCgJKMaUulPbiUK4unk-L1Sjzn66bk3D6ktO1fSfzS7n09b90ZPadKxJNrHE3OSn5isD3TFycXdWA5yIeByRyG13A4Q1TpHmfz7K1NQGJ9jNzCChG6rgeq3ejTY3S9BCGscMYXDOv1XREi1yr8emryn6EGZ7JMvX6MsJUYWOKE0TAmFFSDLtY3urueDwVqAaNPlansyjeAd9"
-                  alt="Satellite map view of Jabalpur, India — Siddhya Technology headquarters"
+                  alt="Satellite map view of Jabalpur, India  -  Siddhya Technology headquarters"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-6">
@@ -133,7 +142,7 @@ export default function ContactPage() {
                         Hours
                       </p>
                       <p className="font-body-md text-body-md">
-                        Mon – Fri: 09:00 AM – 07:00 PM IST
+                        Mon  -  Fri: 09:00 AM  -  07:00 PM IST
                       </p>
                     </div>
                   </div>
@@ -202,7 +211,7 @@ export default function ContactPage() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAoMVcnbXAzrvqXv1Sj9daIebge8wKdHw4kalPZs-JNJ7t84qYBUm3wGpLCQcvY0bQP0FQmlU1vr8JYGtMwHkXv6W_ktlhP8g9WtmElcLFqVxEP5Y8Oi9BqzYIrGXtjapsgVDVTnG-_8t0NKWnDsRd0QS78PRUXuzvX44cXABro0ZK3SnUtiUc5Uwcqlxu1cgiVE135mRc3Ey6CGWgu5tKR8lrUNFH9AGkvrOsElGK0vvjf2GYgl-7ZjL-M-HA9VnWJwj9W-VvAA0E"
-                    alt="Sarah Jenkins — CTO, Global Logistics Inc."
+                    alt="Sarah Jenkins  -  CTO, Global Logistics Inc."
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -223,3 +232,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Careers | Siddhya Technology",
+  title: "Careers  -  IT & Software Jobs in Jabalpur, Madhya Pradesh",
   description:
-    "Join our visionary team building next-generation enterprise solutions. Explore open positions at Siddhya Technology.",
+    "Join Siddhya Technology's growing team in Jabalpur, MP. We're hiring software engineers, designers, and IT professionals. Build your career at Jabalpur's leading tech company.",
+  keywords: [
+    "IT jobs Jabalpur",
+    "software developer jobs Jabalpur",
+    "tech jobs Madhya Pradesh",
+    "developer jobs MP",
+    "IT careers Jabalpur",
+    "software engineer jobs Jabalpur",
+    "careers Siddhya Technology",
+  ],
+  alternates: { canonical: "https://siddhyatechnology.in/careers" },
 };
 
 const PERKS = [
@@ -65,7 +75,7 @@ const OPEN_POSITIONS = ["Senior Flutter Developer", "Full-Stack Engineer (Node/R
 export default function CareersPage() {
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative bg-primary-container py-24 md:py-32 overflow-hidden">
         {/* Subtle background glow */}
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
@@ -90,7 +100,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* ── Why Work With Us ─────────────────────────────────────────────── */}
+      {/* â”€â”€ Why Work With Us â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-20 md:py-24 bg-surface">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center mb-12 md:mb-16">
@@ -124,7 +134,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* ── Open Positions ───────────────────────────────────────────────── */}
+      {/* â”€â”€ Open Positions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section
         id="open-positions"
         className="py-20 md:py-24 bg-surface-container-low scroll-mt-navbar-height"
@@ -237,7 +247,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* ── Quick Application Form ───────────────────────────────────────── */}
+      {/* â”€â”€ Quick Application Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section
         id="apply-now"
         className="py-20 md:py-24 bg-surface scroll-mt-navbar-height"
@@ -361,7 +371,7 @@ export default function CareersPage() {
                     <span className="text-primary font-semibold">browse files</span>
                   </span>
                   <span className="font-label-sm text-label-sm text-outline">
-                    PDF, DOC, DOCX — up to 5 MB
+                    PDF, DOC, DOCX "” up to 5 MB
                   </span>
                   <input
                     id="resume"
@@ -385,7 +395,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* ── CTA Banner ───────────────────────────────────────────────────── */}
+      {/* â”€â”€ CTA Banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mb-24">
         <div className="bg-primary-container rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
           {/* Subtle grid pattern */}
@@ -430,3 +440,4 @@ export default function CareersPage() {
     </>
   );
 }
+

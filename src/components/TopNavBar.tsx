@@ -39,11 +39,13 @@ export default function TopNavBar() {
     >
       <nav className="flex items-center justify-between px-4 md:px-margin-desktop max-w-max-width mx-auto w-full h-full">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-h3 text-h3 font-bold text-surface-container-lowest shrink-0"
-        >
-          Siddhya Technology
+        <Link href="/" className="shrink-0 flex items-center">
+          <img
+            src="/screen.png"
+            alt="Siddhya Technology"
+            className="h-11 w-auto"
+            style={{ filter: 'brightness(0) invert(1)' }}
+          />
         </Link>
 
         {/* Desktop links */}
@@ -77,12 +79,12 @@ export default function TopNavBar() {
         {/* Mobile hamburger */}
         <button
           aria-label="Toggle menu"
-          className="md:hidden flex flex-col gap-[5px] p-2"
+          className="md:hidden flex flex-col gap-1.25 p-2"
           onClick={() => setMenuOpen((v) => !v)}
         >
           <span
             className={`block h-0.5 w-6 bg-surface-container-lowest transition-transform duration-300 origin-center ${
-              menuOpen ? "translate-y-[7px] rotate-45" : ""
+              menuOpen ? "translate-y-1.75 rotate-45" : ""
             }`}
           />
           <span
@@ -92,7 +94,7 @@ export default function TopNavBar() {
           />
           <span
             className={`block h-0.5 w-6 bg-surface-container-lowest transition-transform duration-300 origin-center ${
-              menuOpen ? "-translate-y-[7px] -rotate-45" : ""
+              menuOpen ? "-translate-y-1.75 -rotate-45" : ""
             }`}
           />
         </button>
@@ -100,7 +102,7 @@ export default function TopNavBar() {
 
       {/* Mobile dropdown */}
       <div
-        className={`md:hidden absolute top-[68px] left-0 w-full bg-primary-container shadow-lg transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute top-navbar-height left-0 w-full bg-primary-container shadow-lg transition-all duration-300 overflow-hidden ${
           menuOpen ? "max-h-screen pb-4" : "max-h-0"
         }`}
       >

@@ -2,12 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Our Work | Siddhya Technology",
+  title: "Our Work & Portfolio  -  50+ Projects Delivered | Jabalpur IT Company",
   description:
-    "Explore Siddhya Technology's portfolio of successful digital transformations — from mobile apps and SaaS platforms to enterprise-grade cloud solutions.",
+    "Explore Siddhya Technology's portfolio of 50+ delivered projects  -  mobile apps, SaaS platforms, ERPNext implementations, and enterprise software for clients across Jabalpur, Madhya Pradesh and India.",
+  keywords: [
+    "IT portfolio Jabalpur",
+    "software projects Madhya Pradesh",
+    "ERP projects India",
+    "tech company portfolio Jabalpur",
+    "mobile app portfolio MP",
+    "software case studies Jabalpur",
+  ],
+  alternates: { canonical: "https://siddhyatechnology.in/our-work" },
 };
 
-// ─── Filter tab labels ────────────────────────────────────────────────────────
+// ''' Filter tab labels ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 const FILTER_TABS = [
   "All",
   "App Dev",
@@ -17,7 +26,7 @@ const FILTER_TABS = [
   "SaaS Platform",
 ];
 
-// ─── Portfolio project cards ──────────────────────────────────────────────────
+// ''' Portfolio project cards ''''''''''''''''''''''''''''''''''''''''''''''''''
 interface Project {
   id: number;
   badge: string;
@@ -110,12 +119,12 @@ const PORTFOLIO_PROJECTS: Project[] = [
   },
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
+// '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 export default function OurWorkPage() {
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────────────────────── */}
+      {/* '' Hero ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="bg-primary-container py-16 text-center">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <h1 className="font-h1 text-h1-mobile md:text-h1 text-surface-container-lowest mb-4">
@@ -128,7 +137,7 @@ export default function OurWorkPage() {
         </div>
       </section>
 
-      {/* ── Filter Tabs — sticky below navbar ────────────────────────────────── */}
+      {/* '' Filter Tabs  -  sticky below navbar '''''''''''''''''''''''''''''''''' */}
       <section className="sticky top-[68px] z-40 bg-surface border-b border-outline-variant">
         {/*
           On mobile the tabs overflow and can be scrolled horizontally.
@@ -141,7 +150,7 @@ export default function OurWorkPage() {
                 key={tab}
                 className={
                   i === 0
-                    ? // Active — underline style (desktop) / filled pill (mobile)
+                    ? // Active  -  underline style (desktop) / filled pill (mobile)
                       "whitespace-nowrap font-label-sm text-label-sm font-semibold text-primary border-b-2 border-primary pb-1 transition-all"
                     : "whitespace-nowrap font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all"
                 }
@@ -153,11 +162,11 @@ export default function OurWorkPage() {
         </div>
       </section>
 
-      {/* ── Featured Project — SellWhatUMade ─────────────────────────────────── */}
+      {/* '' Featured Project  -  SellWhatUMade ''''''''''''''''''''''''''''''''''' */}
       <section className="py-8 md:py-12 bg-surface">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-lg transition-shadow duration-300">
-            {/* Left — image */}
+            {/* Left  -  image */}
             <div className="relative md:w-1/2 h-64 md:h-auto md:min-h-[420px] overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -172,7 +181,7 @@ export default function OurWorkPage() {
               </div>
             </div>
 
-            {/* Right — content */}
+            {/* Right  -  content */}
             <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
               <span className="text-on-primary-container font-semibold uppercase tracking-wider text-xs mb-2">
                 E-Commerce SaaS
@@ -212,7 +221,7 @@ export default function OurWorkPage() {
         </div>
       </section>
 
-      {/* ── Portfolio Grid ────────────────────────────────────────────────────── */}
+      {/* '' Portfolio Grid '''''''''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="pb-24 bg-surface">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
@@ -264,7 +273,7 @@ export default function OurWorkPage() {
                     ))}
                   </div>
 
-                  {/* CTA link — pushed to bottom */}
+                  {/* CTA link  -  pushed to bottom */}
                   <div className="mt-auto">
                     <Link
                       href="/our-work"
@@ -283,7 +292,7 @@ export default function OurWorkPage() {
         </div>
       </section>
 
-      {/* ── CTA Banner ───────────────────────────────────────────────────────── */}
+      {/* '' CTA Banner ''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="py-24 bg-surface-container-low">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
           <h2 className="font-h2 text-h2-mobile md:text-h2 text-primary mb-4">
@@ -314,3 +323,4 @@ export default function OurWorkPage() {
     </>
   );
 }
+

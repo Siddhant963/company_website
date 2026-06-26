@@ -19,9 +19,14 @@ export default function Footer() {
     <footer className="w-full pt-stack-lg pb-stack-md bg-primary-container">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
         <div className="space-y-4">
-          <div className="font-h4 text-h4 font-bold text-surface-container-lowest">
-            Siddhya Technology
-          </div>
+          <Link href="/">
+            <img
+              src="/screen.png"
+              alt="Siddhya Technology"
+              className="h-10 w-auto"
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
+          </Link>
           <a
             href="https://wa.me/916265004675"
             target="_blank"

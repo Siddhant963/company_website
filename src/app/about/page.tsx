@@ -2,9 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | Siddhya Technology",
+  title: "About Us  -  Jabalpur's Trusted IT Company Since 2026",
   description:
-    "Founded in 2026 in Barela, Jabalpur, Siddhya Technology pioneers the next generation of digital solutions through engineering excellence and human-centric design.",
+    "Founded in Barela, Jabalpur MP, Siddhya Technology is a team of 20+ expert developers delivering enterprise IT solutions. Learn about our story, mission, and why businesses across Madhya Pradesh trust us.",
+  keywords: [
+    "about Siddhya Technology",
+    "IT company Jabalpur history",
+    "tech company Jabalpur team",
+    "software company Madhya Pradesh",
+    "trusted IT company Jabalpur",
+    "IT company founded Jabalpur",
+  ],
+  alternates: { canonical: "https://siddhyatechnology.in/about" },
 };
 
 const SERVICES = [
@@ -76,7 +85,7 @@ const INFO_CARDS = [
 export default function AboutPage() {
   return (
     <>
-      {/* ── Hero ──────────────────────────────────────────────────── */}
+      {/* '' Hero '''''''''''''''''''''''''''''''''''''''''''''''''''' */}
       <header className="relative bg-primary-container overflow-hidden py-20 md:py-28 lg:py-32">
         {/* Subtle technical grid overlay */}
         <div
@@ -115,7 +124,7 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* ── Our Story ─────────────────────────────────────────────── */}
+      {/* '' Our Story ''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="py-16 md:py-24 bg-surface-container-lowest">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Text content */}
@@ -152,7 +161,7 @@ export default function AboutPage() {
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              alt="Futuristic corporate office in Jabalpur — Siddhya Technology headquarters"
+              alt="Futuristic corporate office in Jabalpur  -  Siddhya Technology headquarters"
               className="w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr9CDEIyNDnuZn654pZ3auX2vseyUoJmaeFYwUSfYLHg2Qqa_fvnSRwGL7hNxK7gls_MYUJOc-H1PmXnSzKwyVwJLa2qSJP_c9I5VGgPL6zAj86L5JtprIjt59emk_4vo1onL9kvE5GqnrnaJCHimnSO1a-UEcdxcA1vqpWeFrLGsBjSxIGWOlVU1qqndo0LND3Dx7WZumGJ4Kmx4EUYntH1P0iGSQdp5nwB736HJtiKAkhw-qHQ1DwHSUcPfPICEhaitC3hAPQY03"
             />
@@ -160,7 +169,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Engineering Stack ──────────────────────────────────────── */}
+      {/* '' Engineering Stack '''''''''''''''''''''''''''''''''''''''' */}
       <section className="py-12 bg-surface-container-low border-y border-outline-variant/30 overflow-hidden">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <p className="text-center font-label-sm text-label-sm text-outline mb-8 uppercase tracking-widest">
@@ -179,7 +188,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── What We Do ────────────────────────────────────────────── */}
+      {/* '' What We Do '''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="py-16 md:py-24 bg-surface">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="text-center mb-12 md:mb-16">
@@ -212,7 +221,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── SellWhatUMade Featured Product ────────────────────────── */}
+      {/* '' SellWhatUMade Featured Product '''''''''''''''''''''''''' */}
       <section className="py-16 md:py-24">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="relative overflow-hidden rounded-[2rem] bg-primary text-surface-container-lowest p-8 md:p-12 lg:p-20 shadow-2xl">
@@ -258,7 +267,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Company Details Info Cards ─────────────────────────────── */}
+      {/* '' Company Details Info Cards ''''''''''''''''''''''''''''''' */}
       <section className="py-16 md:py-24 bg-surface-container-low">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
@@ -282,7 +291,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── CTA Banner ────────────────────────────────────────────── */}
+      {/* '' CTA Banner '''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-24">
         <div className="relative bg-primary-container rounded-3xl p-8 md:p-16 text-center overflow-hidden">
           {/* Abstract grid bg */}
@@ -337,3 +346,4 @@ export default function AboutPage() {
     </>
   );
 }
+

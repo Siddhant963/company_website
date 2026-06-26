@@ -3,12 +3,25 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Services | Siddhya Technology",
+  title: "IT Services  -  Software, ERP, Cloud & Digital Marketing in Jabalpur",
   description:
-    "We empower organizations with cutting-edge technology services designed for scalability, security, and peak performance.",
+    "Complete IT services in Jabalpur, MP: Custom Software Development, ERPNext Implementation, Mobile Apps, Cloud Infrastructure, Digital Marketing, AI/ML & Managed IT. Serving businesses Pan-India.",
+  keywords: [
+    "software development services Jabalpur",
+    "ERPNext implementation Jabalpur",
+    "ERP services Madhya Pradesh",
+    "digital marketing services Jabalpur",
+    "mobile app development Jabalpur",
+    "cloud consulting Jabalpur",
+    "AI ML services Jabalpur",
+    "managed IT services Jabalpur",
+    "web development services Jabalpur",
+    "IT services MP",
+  ],
+  alternates: { canonical: "https://siddhyatechnology.in/services" },
 };
 
-// ─── Sidebar categories ──────────────────────────────────────────────────────
+// ''' Sidebar categories ''''''''''''''''''''''''''''''''''''''''''''''''''''''
 const CATEGORIES = [
   { label: "All Services", active: true },
   { label: "Application Development", active: false },
@@ -18,7 +31,7 @@ const CATEGORIES = [
   { label: "AI & Data Analytics", active: false },
 ];
 
-// ─── Service card data ────────────────────────────────────────────────────────
+// ''' Service card data ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 type Badge = { text: string; className: string } | null;
 
 interface ServiceCard {
@@ -114,7 +127,7 @@ const SERVICE_CARDS: ServiceCard[] = [
     title: "AI & Data Analytics",
     badge: { text: "Future Ready", className: "bg-secondary-container text-on-secondary-container" },
     description:
-      "Harness the power of artificial intelligence and machine learning to transform raw data into actionable insights. We design custom AI pipelines, build predictive analytics dashboards, and integrate intelligent automation into your existing systems — driving smarter, faster decisions at every level of your organization.",
+      "Harness the power of artificial intelligence and machine learning to transform raw data into actionable insights. We design custom AI pipelines, build predictive analytics dashboards, and integrate intelligent automation into your existing systems  -  driving smarter, faster decisions at every level of your organization.",
     tags: ["Python", "TensorFlow", "Power BI", "LangChain", "OpenAI API"],
     footerLeft: (
       <p className="text-on-surface-variant font-label-sm text-label-sm">
@@ -124,11 +137,11 @@ const SERVICE_CARDS: ServiceCard[] = [
   },
 ];
 
-// ─── Page component ───────────────────────────────────────────────────────────
+// ''' Page component '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 export default function ServicesPage() {
   return (
     <>
-      {/* ── Page Header ──────────────────────────────────────────────────── */}
+      {/* '' Page Header '''''''''''''''''''''''''''''''''''''''''''''''''''' */}
       <header className="pt-8 pb-8 md:pt-[52px] md:pb-stack-lg bg-surface-container-lowest">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <h1 className="font-h1 text-h1-mobile md:text-h1 text-primary mb-4">
@@ -141,11 +154,11 @@ export default function ServicesPage() {
         </div>
       </header>
 
-      {/* ── Main Layout: Sidebar + Cards ─────────────────────────────────── */}
+      {/* '' Main Layout: Sidebar + Cards ''''''''''''''''''''''''''''''''''' */}
       <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-stack-lg">
         <div className="flex flex-col md:flex-row gap-gutter">
 
-          {/* ── Sticky Sidebar (25%) ──────────────────────────────────────── */}
+          {/* '' Sticky Sidebar (25%) '''''''''''''''''''''''''''''''''''''''' */}
           <aside className="w-full md:w-1/4 shrink-0">
             {/* On mobile: category pills scroll horizontally */}
             <div className="md:hidden flex gap-2 overflow-x-auto pb-2 -mx-margin-mobile px-margin-mobile scrollbar-none">
@@ -209,7 +222,7 @@ export default function ServicesPage() {
             </div>
           </aside>
 
-          {/* ── Service Cards (75%) ───────────────────────────────────────── */}
+          {/* '' Service Cards (75%) ''''''''''''''''''''''''''''''''''''''''' */}
           <section className="w-full md:w-3/4 space-y-6 md:space-y-8">
             {SERVICE_CARDS.map((service) => (
               <article
@@ -272,7 +285,7 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* ── Help CTA Banner ───────────────────────────────────────────────── */}
+      {/* '' Help CTA Banner ''''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-16 mb-8 md:mb-16">
         <div className="bg-primary-container rounded-2xl md:rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-12">
           <div className="flex-1 space-y-3 text-center md:text-left">
@@ -281,7 +294,7 @@ export default function ServicesPage() {
             </h2>
             <p className="font-body-lg text-body-lg text-surface-container-lowest/80">
               Our solution architects will map the right services to your business
-              goals — at no cost.
+              goals  -  at no cost.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 shrink-0">
@@ -301,3 +314,4 @@ export default function ServicesPage() {
     </>
   );
 }
+

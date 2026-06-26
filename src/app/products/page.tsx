@@ -2,12 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Our Products | Siddhya Technology",
+  title: "Software Products  -  SaaS & Enterprise Solutions | Jabalpur",
   description:
-    "Pioneering enterprise solutions designed to transform industries. From e-commerce ecosystems to specialized healthcare and agriculture platforms, we build the future of SaaS.",
+    "Discover Siddhya Technology's homegrown software products  -  SellWhatUMade e-commerce platform and enterprise SaaS solutions built in Jabalpur, MP for Indian businesses.",
+  keywords: [
+    "SellWhatUMade",
+    "software products Jabalpur",
+    "SaaS products India",
+    "e-commerce software Jabalpur",
+    "enterprise software MP",
+    "homegrown software company Jabalpur",
+  ],
+  alternates: { canonical: "https://siddhyatechnology.in/products" },
 };
 
-/* ─── Data ─────────────────────────────────────────────────────────────── */
+/* ''' Data ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */
 
 const SELL_FEATURES = [
   { icon: "person_add", label: "Seller Onboarding" },
@@ -83,12 +92,12 @@ const PIPELINE = [
   },
 ];
 
-/* ─── Page ─────────────────────────────────────────────────────────────── */
+/* ''' Page ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' */
 
 export default function ProductsPage() {
   return (
     <>
-      {/* ── Hero ──────────────────────────────────────────────────────── */}
+      {/* '' Hero '''''''''''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section
         className="bg-primary-container py-16 md:py-24 relative overflow-hidden"
         style={{
@@ -113,12 +122,12 @@ export default function ProductsPage() {
         <div className="absolute top-0 right-0 w-1/3 h-full opacity-20 pointer-events-none bg-gradient-to-l from-white/10 to-transparent" />
       </section>
 
-      {/* ── Featured Product: SellWhatUMade ──────────────────────────── */}
+      {/* '' Featured Product: SellWhatUMade '''''''''''''''''''''''''''' */}
       <section className="py-12 md:py-20 bg-surface">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-lg flex flex-col lg:flex-row">
 
-            {/* Left Column — content */}
+            {/* Left Column  -  content */}
             <div className="lg:w-1/2 p-8 md:p-12 flex flex-col justify-center">
               {/* Brand row */}
               <div className="flex items-center gap-3 mb-6">
@@ -135,7 +144,7 @@ export default function ProductsPage() {
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-6">
                 A comprehensive multi-vendor marketplace engine designed for
                 rapid deployment. Empower artisans, local businesses, and
-                distributors with a robust digital storefront — built for{" "}
+                distributors with a robust digital storefront  -  built for{" "}
                 <span className="font-bold text-primary">Vocal for Local</span>.
               </p>
 
@@ -186,7 +195,7 @@ export default function ProductsPage() {
               </div>
             </div>
 
-            {/* Right Column — mockup */}
+            {/* Right Column  -  mockup */}
             <div className="lg:w-1/2 bg-surface-container-high p-8 flex items-center justify-center relative min-h-[300px] md:min-h-[400px]">
               <div className="w-full h-full rounded-xl overflow-hidden shadow-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -196,7 +205,7 @@ export default function ProductsPage() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfMX-pV5W3gFQLgQCz5UFuc8IUZk2BomCveuBwD0ZvNWD_mlui6QJJ028O_EZTWhMYDZ5sw9MP_UN6V0SM4Fd14kgIHI1fYyKxpYebZAMdCV00uoAEc_OK6_crTeGrjObi653RkDkuRUS3ZMKDsC6-JrbCPuZ_cdClIN8h4xpcZ7eywFzvdPq4tr-e_yS33g7t-fBRRUFiusoYu3Ouun4wEav_T79zeArFwlWGl4mbN3GQu6qMA70o-vh9QUCfJUpgGcy9fdx4ZjWy"
                 />
               </div>
-              {/* Floating mobile overlay — xl only */}
+              {/* Floating mobile overlay  -  xl only */}
               <div className="absolute -bottom-4 -left-4 w-48 h-48 rounded-2xl shadow-xl border-4 border-surface-container-lowest overflow-hidden hidden xl:block">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -210,7 +219,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* ── How It Works ─────────────────────────────────────────────── */}
+      {/* '' How It Works ''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="py-12 md:py-20 bg-surface-container-low">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           {/* Section heading */}
@@ -225,7 +234,7 @@ export default function ProductsPage() {
           </div>
 
           <div className="space-y-12 md:space-y-16">
-            {/* ── For Sellers ── */}
+            {/* '' For Sellers '' */}
             <div>
               <h3 className="font-h3 text-h3 text-on-surface mb-6 md:mb-8 flex items-center gap-3">
                 <span className="bg-primary text-white p-1 rounded-md material-symbols-outlined">
@@ -258,7 +267,7 @@ export default function ProductsPage() {
               </div>
             </div>
 
-            {/* ── For Buyers ── */}
+            {/* '' For Buyers '' */}
             <div>
               <h3 className="font-h3 text-h3 text-on-surface mb-6 md:mb-8 flex items-center gap-3">
                 <span className="bg-secondary text-white p-1 rounded-md material-symbols-outlined">
@@ -294,7 +303,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* ── Our Pipeline ─────────────────────────────────────────────── */}
+      {/* '' Our Pipeline ''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="py-12 md:py-20 bg-surface">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="mb-8 md:mb-12">
@@ -343,7 +352,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* ── CTA Banner ───────────────────────────────────────────────── */}
+      {/* '' CTA Banner ''''''''''''''''''''''''''''''''''''''''''''''''' */}
       <section className="py-12 md:py-20 bg-surface-container-low">
         <div className="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="bg-primary-container rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
@@ -353,7 +362,7 @@ export default function ProductsPage() {
               </h2>
               <p className="text-surface-container-lowest/80 font-body-lg text-body-lg max-w-2xl mx-auto mb-8">
                 Whether you want a demo, a partnership, or to learn more about
-                our roadmap — our team is ready to connect with you.
+                our roadmap  -  our team is ready to connect with you.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/contact">
@@ -405,3 +414,4 @@ export default function ProductsPage() {
     </>
   );
 }
+
