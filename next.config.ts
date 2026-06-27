@@ -1,6 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Redirect www → non-www so all canonical signals point to one domain
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.siddhyatechnology.in" }],
+        destination: "https://siddhyatechnology.in/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

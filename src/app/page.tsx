@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Siddhya Technology | #1 IT Company in Jabalpur, Madhya Pradesh",
@@ -188,12 +189,12 @@ export default function Home() {
               Mobile Apps, and ERP solutions tailored for the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="w-full sm:w-auto bg-electric-blue text-white px-8 py-3.5 rounded-lg font-bold text-body-md shadow-lg hover:-translate-y-0.5 transition-transform text-center">
+              <Link href="/contact" className="w-full sm:w-auto bg-electric-blue text-white px-8 py-3.5 rounded-lg font-bold text-body-md shadow-lg hover:-translate-y-0.5 transition-transform text-center">
                 Start a Project
-              </button>
-              <button className="w-full sm:w-auto border-2 border-surface-container-lowest text-surface-container-lowest px-8 py-3.5 rounded-lg font-bold text-body-md hover:bg-surface-container-lowest/10 transition-colors text-center">
+              </Link>
+              <Link href="/our-work" className="w-full sm:w-auto border-2 border-surface-container-lowest text-surface-container-lowest px-8 py-3.5 rounded-lg font-bold text-body-md hover:bg-surface-container-lowest/10 transition-colors text-center">
                 View Our Work
-              </button>
+              </Link>
             </div>
 
             {/* Stats Row "” 2-col on mobile, 4-col on lg */}
@@ -520,14 +521,14 @@ export default function Home() {
             </p>
             {/* Full-width stacked on mobile, inline on sm+ */}
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="w-full sm:w-auto bg-white text-electric-blue px-8 md:px-10 py-4 rounded-xl font-bold text-body-md md:text-body-lg shadow-xl hover:bg-white/90 transition-all flex items-center justify-center gap-3">
+              <Link href="/contact" className="w-full sm:w-auto bg-white text-electric-blue px-8 md:px-10 py-4 rounded-xl font-bold text-body-md md:text-body-lg shadow-xl hover:bg-white/90 transition-all flex items-center justify-center gap-3">
                 <span className="material-symbols-outlined">mail</span>
                 Send an Inquiry
-              </button>
-              <button className="w-full sm:w-auto bg-[#25D366] text-white px-8 md:px-10 py-4 rounded-xl font-bold text-body-md md:text-body-lg shadow-xl hover:brightness-105 transition-all flex items-center justify-center gap-3">
+              </Link>
+              <a href="https://wa.me/916265004675" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto bg-[#25D366] text-white px-8 md:px-10 py-4 rounded-xl font-bold text-body-md md:text-body-lg shadow-xl hover:brightness-105 transition-all flex items-center justify-center gap-3">
                 <span className="material-symbols-outlined">chat</span>
                 WhatsApp Us
-              </button>
+              </a>
             </div>
           </div>
 
