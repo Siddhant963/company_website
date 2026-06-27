@@ -161,6 +161,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <head>
+        {/* Google Analytics — must be in <head> for GA tag detection */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SKXWBEY3TB"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SKXWBEY3TB');
+          `}
+        </Script>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
@@ -174,19 +187,6 @@ export default function RootLayout({
         <TopNavBar />
         <main className="mt-navbar-height">{children}</main>
         <Footer />
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-SKXWBEY3TB"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-SKXWBEY3TB');
-          `}
-        </Script>
       </body>
     </html>
   );
