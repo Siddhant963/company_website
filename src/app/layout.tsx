@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import TopNavBar from "@/components/TopNavBar";
 import Footer from "@/components/Footer";
@@ -186,6 +187,7 @@ export default function RootLayout({
         <TopNavBar />
         <main className="mt-navbar-height">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

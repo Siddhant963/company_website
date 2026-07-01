@@ -1,12 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+
+  useEffect(() => {
+    if (status !== 'success') return;
+    document.body.style.overflow = 'hidden';
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setStatus('idle');
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [status]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -38,7 +51,6 @@ export default function ContactForm() {
 
       setStatus('success');
       (e.target as HTMLFormElement).reset();
-      setTimeout(() => setStatus('idle'), 5000);
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong');
       setStatus('error');
@@ -49,6 +61,7 @@ export default function ContactForm() {
     'w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface font-body-md text-body-md focus:border-electric-blue focus:outline-none focus:ring-2 focus:ring-electric-blue/10 transition-all';
 
   return (
+    <>
     <form className="space-y-6" onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
         {/* Name */}
@@ -154,5 +167,46 @@ export default function ContactForm() {
         )}
       </button>
     </form>
+
+    {status === 'success' && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="thank-you-title"
+      >
+        <div
+          className="absolute inset-0 bg-black/50"
+          onClick={() => setStatus('idle')}
+        />
+        <div className="relative bg-surface-container-lowest rounded-2xl shadow-2xl max-w-md w-full p-8 text-center space-y-4">
+          <button
+            type="button"
+            onClick={() => setStatus('idle')}
+            className="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface transition-colors"
+            aria-label="Close"
+          >
+            <span className="material-symbols-outlined">close</span>
+          </button>
+          <span className="material-symbols-outlined text-6xl text-electric-blue">
+            check_circle
+          </span>
+          <h3 id="thank-you-title" className="font-h3 text-h3 text-primary">
+            Thank You!
+          </h3>
+          <p className="font-body-md text-body-md text-on-surface-variant">
+            Your inquiry has been received. Our team will get back to you within 4 hours.
+          </p>
+          <button
+            type="button"
+            onClick={() => setStatus('idle')}
+            className="mt-2 inline-flex items-center justify-center bg-electric-blue text-white font-bold px-8 py-3 rounded-lg hover:brightness-110 transition-all"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    )}
+    </>
   );
 }
