@@ -104,6 +104,9 @@ const organizationSchema = {
         height: 60,
       },
       image: `${SITE_URL}/screen.png`,
+      sameAs: [
+        "https://www.linkedin.com/company/siddhya-technology-pvt-ltd/",
+      ],
       description:
         "Jabalpur's leading IT company offering Custom Software Development, Mobile Apps, ERPNext Implementation, Digital Marketing & Cloud Solutions.",
       telephone: "+91-6265004675",
